@@ -1,0 +1,16 @@
+{{ if .Site.Params.vyDiagnostic }}
+
+<div class="well">
+  {{/* <title>{{ .Params.title }} | {{ .Site.title }}</title> */}}
+  <br />
+  <h1>vyDiagnostics here</h1>
+
+  <br />
+  {{/* {{ printf "%#v" $.title}} */}}
+  <p>title: {{ .Title}}</p>
+
+  <br />
+  <p>Type: {{ .Type}}</p>
+</div>
+
+{{ end }}

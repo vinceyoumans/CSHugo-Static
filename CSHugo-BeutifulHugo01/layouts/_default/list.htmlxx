@@ -1,0 +1,90 @@
+{{ define "main" }}
+<div class="container" role="main">
+  <div class="row">
+    
+              {{/* <div class="col-lg-0 col-lg-offset-0 col-md-0 col-md-offset-2">
+                <h1>put something here 1</h1>
+              </div>
+              
+              <div class="outer. col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0">
+              <h1> list.html</h1>
+              </div>
+                */}}
+
+
+                {{/* <div class="outer. col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0">
+                  <div class="inner">
+                    <h1>Make some knickels here</h1>
+                  </div>
+                  <div class="inner">
+                    2
+                    <h1>put something here 2</h1>
+                  </div>
+                  <div class="inner">
+                    3
+                    <h1>put something here 2</h1>
+                  </div>
+                  <div class="inner">
+                    4
+                    <h1>put something here 2</h1>
+                  </div>
+                </div> */}}
+
+                {{/*
+                <div class="col-lg-2 col-lg-offset-0 col-md-2 col-md-offset-0">
+                  <h1>put something here 2</h1>
+                </div>
+
+                <div class="col-lg-2 col-lg-offset-0 col-md-2 col-md-offset-0">
+                  <h1>put something here 2bb</h1>
+                </div>
+                <div class="col-lg-2 col-lg-offset-0 col-md-2 col-md-offset-0">
+                  <h1>put something here 2c</h1>
+                </div>
+                */}} {{/*
+                <div class="col-lg-7 col-lg-offset-4 col-md-7 col-md-offset-4">
+                  */}} {{/*
+                  <div class="col-lg-7 col-lg-offset-0 col-md-7 col-md-offset-0">
+                    */}}
+
+          
+          <div class="col-lg-9 col-lg-offset-0 col-md-9 col-md-offset-0">
+            <h1>put something here 2</h1>
+            {{ with .Content }}
+            <div class="well">
+              <h1>put something here 3</h1>
+              {{.}}
+              <h1>put something here 4</h1>
+            </div>
+            {{ end }}
+            <div class="posts-list">
+              <h1>put something here</h1>
+              {{ range .Paginator.Pages }} {{ partial "post_preview.html" .}} {{
+              end }}
+              <h1>put something here</h1>
+            </div>
+            {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+            <ul class="pager main-pager">
+              {{ if .Paginator.HasPrev }}
+              <li class="previous">
+                <a href="{{ .Permalink }}page/{{ .Paginator.Prev.PageNumber }}/"
+                  >&larr; {{ i18n "newerPosts" }}</a
+                >
+              </li>
+              {{ end }} {{ if .Paginator.HasNext }}
+              <li class="next">
+                <a href="{{ .Permalink }}page/{{ .Paginator.Next.PageNumber }}/"
+                  >{{ i18n "olderPosts" }} &rarr;</a
+                >
+              </li>
+              {{ end }}
+            </ul>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+      <h1>put something here</h1>
+      {{ end }}
+    {{/* </div> */}}
+  </div>
+</div>
