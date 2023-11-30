@@ -171,7 +171,7 @@ figure:not(.dark) img, img.white {
 /* menuBackGround */
 .navbar-custom {
   background: var(--menuBackGround);
-  border-bottom: 1px solid #EAEAEA;
+  border-bottom: 1px solid #22bc93;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
